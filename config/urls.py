@@ -35,12 +35,7 @@ urlpatterns = [
     path("onboarding/", include("apps.onboarding.urls")),
     path("organizations/media/", include("apps.media_library.urls_org")),
     path("", include("apps.accounts.urls_root")),
-    path("health/", health_check),
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-from django.http import JsonResponse
-
-def health_check(request):
-    return JsonResponse({"status": "ok"})
