@@ -35,6 +35,7 @@ urlpatterns = [
     path("onboarding/", include("apps.onboarding.urls")),
     path("organizations/media/", include("apps.media_library.urls_org")),
     path("", include("apps.accounts.urls_root")),
+    path("health/", health_check),
 ]
 
 if settings.DEBUG:
