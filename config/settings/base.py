@@ -253,7 +253,16 @@ CSP_STYLE_SRC = ("'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net")
 CSP_FONT_SRC = ("'self'", "https:", "data:")
 CSP_IMG_SRC = ("'self'", "data:", "https:")
 CSP_CONNECT_SRC = ("'self'",)
-CSP_FORM_ACTION = ("'self'", "https://accounts.google.com")
+CSP_FORM_ACTION = (
+    "'self'",
+    "https://accounts.google.com",
+    "https://www.facebook.com",
+    "https://www.instagram.com",
+    "https://api.instagram.com",
+    "https://www.linkedin.com",
+    "https://www.tiktok.com",
+    "https://www.pinterest.com",
+)
 
 # Media Library
 MEDIA_LIBRARY_MAX_IMAGE_SIZE = 20 * 1024 * 1024  # 20MB
